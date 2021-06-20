@@ -130,8 +130,7 @@ $("#btn_limpiar_filtros").click(function(ev){
               },
               callback: function (result) {
                   if(result){
-                    let estatusn = (estatus == 0)? 1: 0;
-                    Buscador.eliminar_direccion(idusuario,estatusn);
+                    Buscador.eliminar_direccion(iddireccion);
                   }
               }
           });
@@ -148,7 +147,7 @@ $("#btn_limpiar_filtros").click(function(ev){
 
       })
       .done(function(data) {          
-       if (data.estatus) {
+       if (data.respuesta) {
           Helpers.alert("Se elimino correctamente", "success");
           Buscador.buscar_direcciones();
       }else{

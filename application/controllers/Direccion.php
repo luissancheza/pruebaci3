@@ -96,7 +96,7 @@ class Direccion extends CI_Controller {
         if (is_request_ajax($this)) {
             $iddireccion = $this->input->post("iddireccion", TRUE);
             
-            $status = $this->c_direccion_model->delete_direccion($iddireccion);
+            $status = $this->direccion_model->delete_direccion($iddireccion);
 
             $response = array(
                 'respuesta' => $status,
